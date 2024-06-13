@@ -1,10 +1,9 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import MainView from '@views/MainView';
 
 export default function App() {
   return (
-    <div>App</div>
+    <div>
+      <MainView />
+    </div>
   )
 }

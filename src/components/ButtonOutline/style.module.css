@@ -1,0 +1,45 @@
+.but{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 25px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    color: #fff;
+    background: none;
+    border-radius: 40px;
+    transition: .2s;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.but:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.but:active{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.text{
+    font-size: 12px;
+}
+
+.icon{
+    font-size: 20px !important;
+}
+
+@media (max-width: 500px) {
+    .but{
+        padding: 10px;
+        border: none;
+    }
+
+    .text{
+        display: none;
+    }
+}
