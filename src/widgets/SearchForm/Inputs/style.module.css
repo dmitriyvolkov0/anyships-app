@@ -32,7 +32,7 @@
     height: 60px;
     border: none;
     outline: none;
-    width: 32px;
+    width: 36px;
     margin: 0 0 0 auto;
     font-size: 14px;
     color: #000;
@@ -57,3 +57,19 @@
 }
 
 .inputDate::-webkit-inner-spin-button { display: none; }
+
+@media (max-width: 620px){
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .input{
+        border-radius: 10px;
+        height: 54px;
+    }
+
+    .inputWrapper:nth-child(2){
+        border-top: 1px solid #DBE0E7;
+        border-bottom: 1px solid #DBE0E7;
+    }
+}
