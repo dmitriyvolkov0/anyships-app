@@ -7,7 +7,7 @@ import SearchForm from '../SearchForm/SearchForm';
 export default function MainScreen({ searchFromProps }) {
   return (
     <div className={s.wrapper}>
-        <Nav/>
+      <Nav/>
       <SearchForm searchFromProps={searchFromProps}/>
     </div>
   )
