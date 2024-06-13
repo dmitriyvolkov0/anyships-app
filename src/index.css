@@ -31,3 +31,27 @@ body{
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
+
+.MuiSlider-markLabel {
+  font-size: 11px !important; /* Замените на желаемый размер шрифта */
+}
+
+.MuiSlider-mark{
+  display: none;
+}
+
+
+.MuiSlider-thumb{
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.MuiSlider-root{
+  padding: 9px 0 !important;
+}
+
+@media(max-width: 620px){
+  .MuiSlider-markLabel {
+    font-size: 8px !important; /* Замените на желаемый размер шрифта */
+  }
+}

@@ -2,10 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background: #fff;
-    max-width: 824px;
     border-radius: 10px;
     box-sizing: border-box;
-    margin: 0 auto;
 }
 
 .inputWrapper{

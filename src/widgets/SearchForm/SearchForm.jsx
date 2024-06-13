@@ -3,7 +3,9 @@ import { Container } from '@mui/material';
 import s from './style.module.css';
 import { Box } from '@mui/material';
 
-import Inputs from './Inputs/Inputs';
+import TopBlock from './TopBlock/TopBlock';
+import MiddleBlock from './MiddleBlock/MiddleBlock';
+import BottomBlock from './BottomBlock/BottomBlock';
 
 export default function SearchForm({ searchFromProps }) {
   return (
@@ -16,8 +18,11 @@ export default function SearchForm({ searchFromProps }) {
           <h1 className={s.title}>Сервис бронирования яхт</h1>
         </Box>
         
-        <Inputs searchFromProps={searchFromProps}/>
-
+        <Box sx={{maxWidth: '824px', margin: '0 auto'}}>
+          <TopBlock searchFromProps={searchFromProps}/>
+          <MiddleBlock searchFromProps={searchFromProps}/>
+          <BottomBlock />
+        </Box>
       </Container>
     </>
   )

@@ -2,7 +2,7 @@ import s from './style.module.css';
 import { Box } from '@mui/material';
 import { formatDate } from '@utils/helpers/formatDate.js';
 
-export default function Inputs({ searchFromProps }) {
+export default function TopBlock({ searchFromProps }) {
   
   const onPersonsCount = (e) => searchFromProps.setPersonsCount(e.target.value);
   const onHoursCount = (e) => searchFromProps.setHoursCount(e.target.value);

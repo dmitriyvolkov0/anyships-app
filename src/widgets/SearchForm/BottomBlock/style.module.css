@@ -1,0 +1,42 @@
+.button{
+    background: #0C73FE;
+    width: 100%;
+    font-size: 20px;
+    padding: 14.5px 22.5px;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.button:hover{
+    background: #2e86fe;
+}
+.button:active{
+    background: #015ad3;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.subtitle{
+    font-size: 13px;
+    background: #0B68E5;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 6px 20px;
+    border-radius: 50px;
+}
+
+@media(max-width: 500px){
+    .title{font-size: 18px;}
+    .subtitle{
+        font-size: 10px;
+        padding: 6px 13px;
+    }
+}
