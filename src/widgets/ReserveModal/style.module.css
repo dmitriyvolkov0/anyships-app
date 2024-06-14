@@ -1,0 +1,213 @@
+.modalBody{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    max-width: 1219px;
+    background: #EFF1F4;
+    padding: 50px 70px 50px 50px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.closeBut{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    background: #E3E5E8;
+    border: none;
+    border-radius: 40px 0 0 40px;
+    width: 126px;
+    height: 37px;
+    color: #727374;    
+    cursor: pointer;
+    transition: .2s;
+}
+
+.closeBut:hover{
+    background: #0C73FE;
+    color: #fff;
+}
+
+.img{
+    border-radius: 30px;
+    object-fit: contain;
+}
+
+.row{
+    display: flex;
+    gap: 50px;
+}
+
+.title{
+    font-size: 36px;
+    font-family: 'sharp-grotesk-db-cyr-medium';
+    margin: 2px 0 21px 0;
+}
+
+.description{
+    font-size: 18px;
+    line-height: 1.45;
+    margin-bottom: 25px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.formRow{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.inputWrapper{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    width: 100%;
+}
+
+.inputLabel{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #505A68;
+    padding-left: 20px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.input{
+    height: 60px;
+    border: none;
+    outline: none;
+    width: 40px;
+    margin: 0 0 0 auto;
+    font-size: 14px;
+    color: #000;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+}
+
+.input2{
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    padding-left: 20px;
+    outline: none;
+    font-size: 18px;
+    color: #000;
+}
+
+.inputLabel2{
+    width: fit-content;
+    color: #505A68;
+    font-size: 18px;
+    padding-right: 20px;
+    text-wrap: nowrap;
+}
+
+.sendBut{
+    width: 100%;
+    height: 80px;
+    background: #0C73FE;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.sendBut:hover{
+    background: #2e86fe;
+}
+
+.sendBut:active{
+    background: #015ad3;
+}
+
+.policy{
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    color: #606062;
+}
+
+.policy a{
+    color: #606062;    
+}
+
+
+@media (max-width: 1200px) {
+    .row{
+        display: block;
+    }
+
+    .img{
+        display: none;
+    }
+
+    .modalBody{
+        padding: 30px;
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    .closeBut{
+        top: 0;
+        border-radius: 0 20px;
+    }
+
+    .title{
+        font-size: 30px;
+        margin: 15px 0;
+    }
+
+    .description{
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .formRow{
+        flex-direction: column;
+    }
+
+    .input,
+    .input2{
+        font-size: 16px;
+    }
+
+    .inputLabel{
+        font-size: 16px;
+    }
+
+    .inputLabel2{
+        font-size: 14px;
+    }
+    
+    .sendBut{
+        height: 60px;
+    }
+}

@@ -2,11 +2,12 @@ import { Box } from "@mui/material";
 import s from './style.module.css';
 import EastIcon from '@mui/icons-material/East';
 
-export default function Ship({ imgSrc, title, recommendedPrice, curPrice, length, capacity, unavailable }) {
+export default function Ship({ imgSrc, title, recommendedPrice, curPrice, length, capacity, unavailable, showReserveModal }) {
+    
     return (
         <>
         {/* desktop */}
-            <Box className={s.item + (unavailable ? ' ' + s.unavailable : ' ')}>
+            <Box className={s.item + (unavailable ? ' ' + s.unavailable : ' ')} onClick={showReserveModal}>
                 <img className={s.img} src={imgSrc} srcSet={imgSrc} alt={title} />
                 <Box className={s.overlay}></Box>
 
@@ -38,7 +39,7 @@ export default function Ship({ imgSrc, title, recommendedPrice, curPrice, length
             </Box>
 
             {/* mobile */}
-            <Box className={s.mobileItem}>
+            <Box className={s.mobileItem} onClick={showReserveModal}>
                 <img className={s.img} src={imgSrc} srcSet={imgSrc} alt={title} />
                 
                 <Box className={s.mobileOverlay}></Box>

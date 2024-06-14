@@ -1,0 +1,20 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding: 55px 75px;
+    cursor: pointer;
+}
+
+.wrapper:hover{
+    background: #ededed;
+}
+
+.text{
+    font-size: 18px;
+}
+
+.icon{
+    font-size: 28px;
+}

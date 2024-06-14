@@ -1,7 +1,13 @@
 import { useState } from 'react';
 
+// widgets
 import MainScreen from '@widgets/MainScreen/MainScreen';
 import Ships from '@widgets/Ships/Ships';
+import Footer from '@widgets/Footer/Footer';
+
+// modals
+import ReserveModal from '@widgets/ReserveModal/ReserveModal';
+import SuccessModal from '../widgets/SuccessModal/SuccessModal';
 
 import ship1 from '@assets/img/ships/1.jpg';
 import ship2 from '@assets/img/ships/2.jpg';
@@ -21,6 +27,25 @@ export default function MainView() {
 
   const [startTime, setStartTime] = useState(15);
   const [price, setPrice] = useState([15000, 80000]);
+
+  const [isActiveReserveModal, setIsActiveReserveModal] = useState(false);
+  const [isActiveSuccessModal, setIsActiveSuccessModal] = useState(false);
+
+  const showReserveModal = () => {
+    setIsActiveReserveModal(true);
+  }
+  
+  const closeReverseModal = () =>{
+    setIsActiveReserveModal(false);
+  }
+
+  const showSuccessModal = () => {
+    setIsActiveSuccessModal(true);
+  }
+  
+  const closeSuccessModal = () =>{
+    setIsActiveSuccessModal(false);
+  }
 
   const ships = [
     {
@@ -57,7 +82,7 @@ export default function MainView() {
       curPrice: 3000,
       length: 40,
       capacity: 4,
-      unavailable: false
+      unavailable: true
     },
     {
       imgSrc: ship5,
@@ -84,7 +109,7 @@ export default function MainView() {
       curPrice: 3000,
       length: 40,
       capacity: 8,
-      unavailable: false
+      unavailable: true
     },
     {
       imgSrc: ship8,
@@ -111,7 +136,7 @@ export default function MainView() {
       curPrice: 3000,
       length: 40,
       capacity: 4,
-      unavailable: false
+      unavailable: true
     },
     {
       imgSrc: ship1,
@@ -122,7 +147,42 @@ export default function MainView() {
       capacity: 8,
       unavailable: false
     },
-
+    {
+      imgSrc: ship2,
+      title: "Яхта Azimut 68 Princess",
+      recommendedPrice: 1500,
+      curPrice: 3000,
+      length: 40,
+      capacity: 5,
+      unavailable: false
+    },
+    {
+      imgSrc: ship3,
+      title: "Яхта Azimut 68 Princess",
+      recommendedPrice: 1500,
+      curPrice: 3000,
+      length: 40,
+      capacity: 3,
+      unavailable: false
+    },
+    {
+      imgSrc: ship4,
+      title: "Яхта Azimut 68 Princess",
+      recommendedPrice: 1500,
+      curPrice: 3000,
+      length: 40,
+      capacity: 4,
+      unavailable: true
+    },
+    {
+      imgSrc: ship5,
+      title: "Яхта Azimut 68 Princess",
+      recommendedPrice: 1500,
+      curPrice: 3000,
+      length: 40,
+      capacity: 8,
+      unavailable: false
+    },
   ];
 
   
@@ -136,13 +196,26 @@ export default function MainView() {
     startTime: startTime,
     setStartTime: setStartTime,
     price: price,
-    setPrice: setPrice
+    setPrice: setPrice,
   };
 
   return (
-    <div>
+    <>
       <MainScreen searchFromProps={searchFromProps}/>
-      <Ships ships={ships}/>
-    </div>
+      <Ships 
+        ships={ships} 
+        showReserveModal={showReserveModal} 
+      />
+      <Footer/>
+      <ReserveModal 
+        isActiveReserveModal={isActiveReserveModal}
+        closeReverseModal={closeReverseModal} 
+        showSuccessModal={showSuccessModal}
+      />
+      <SuccessModal 
+        isActiveSuccessModal={isActiveSuccessModal}
+        closeSuccessModal={closeSuccessModal} 
+      />
+    </>
   )
 }
