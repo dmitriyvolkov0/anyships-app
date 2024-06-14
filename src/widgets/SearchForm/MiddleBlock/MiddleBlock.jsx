@@ -22,11 +22,11 @@ export default function MiddleBlock({ searchFromProps }) {
 
       <Box className={s.block}>
         <Box className={s.top}>
-          <label className={s.title} htmlFor='inp-4'>Цена / час</label>
+          <label className={s.title} htmlFor='inp-5'>Цена / час</label>
           <Box className={s.indicatorsCointainer}>
-            <input value={searchFromProps.price[0]} id="inp-4" className={s.indicator} type="text" readOnly />
+            <input value={searchFromProps.price[0]} id="inp-5" className={s.indicator} type="text" readOnly />
             <span>-</span>
-            <input value={searchFromProps.price[1]} id="inp-4" className={s.indicator} type="text" readOnly />
+            <input value={searchFromProps.price[1]} id="inp-6" className={s.indicator} type="text" readOnly />
           </Box>
         </Box>
         <Box className={s.bottom}>
